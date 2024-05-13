@@ -1,5 +1,3 @@
-# urls.py (di dalam folder absensi)
-
 from django.urls import path, include
 from rest_framework import routers
 from absensi import views
@@ -11,4 +9,5 @@ router.register(r'absensi', views.AbsensiViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
 ]
